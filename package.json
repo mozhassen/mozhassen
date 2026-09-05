@@ -1,0 +1,16 @@
+{
+  "name": "mohammed-zeinu-hassen-website",
+  "version": "1.0.0",
+  "description": "Academic portfolio and personal website for Mohammed Zeinu Hassen, Lecturer of Philosophy at Addis Ababa Science and Technology University.",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node server.js",
+    "build": "echo 'Build complete'",
+    "lint": "node -c server.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
