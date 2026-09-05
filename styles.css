@@ -1,123 +1,450 @@
+/* Modern, clean academic stylesheet for Mohammed Zeinu Hassen's Academic Website */
+
+:root {
+    --primary: #1e3a8a;
+    --primary-dark: #172554;
+    --primary-light: #3b82f6;
+    --secondary: #0f766e;
+    --text-main: #1f2937;
+    --text-muted: #4b5563;
+    --bg-page: #f8fafc;
+    --bg-card: #ffffff;
+    --border: #e2e8f0;
+    --accent: #2563eb;
+    --tag-bg: #eff6ff;
+    --tag-text: #1d4ed8;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: var(--bg-page);
+    color: var(--text-main);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    line-height: 1.6;
 }
 
+/* Header */
 header {
-    background-color: #2c3e50;
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
     color: white;
     text-align: center;
-    padding: 2rem;
+    padding: 2.25rem 1.5rem;
+    border-bottom: 3px solid var(--accent);
 }
 
+header h1 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.85rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+header .subtitle {
+    margin: 0;
+    font-size: 1rem;
+    color: #cbd5e1;
+    font-weight: 400;
+}
+
+/* Navigation */
 nav {
-    background-color: #34495e;
-    padding: 1rem;
+    background-color: #1e293b;
+    padding: 0.5rem 1rem;
     text-align: center;
-    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
 }
 
 nav .menu {
     margin: 0;
     padding: 0;
     list-style: none;
-    display: flex; /* Horizontal by default on desktop */
+    display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
 }
 
 nav .menu li {
-    margin: 0 15px;
+    margin: 0;
 }
 
 nav .menu a {
-    color: white;
+    color: #e2e8f0;
     text-decoration: none;
-    font-weight: bold;
-    padding: 10px 15px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
     display: block;
+    transition: background-color 0.15s ease, color 0.15s ease;
 }
 
-nav .menu a:hover {
-    color: #ecf0f1;
+nav .menu a:hover,
+nav .menu a.active {
+    background-color: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
 }
 
 .hamburger {
-    display: none; /* Hidden on desktop */
+    display: none;
     font-size: 24px;
     background: none;
     border: none;
     color: white;
     cursor: pointer;
-    padding: 10px;
+    padding: 8px 12px;
+}
+
+/* Content Container */
+main {
+    flex: 1;
+    width: 100%;
+    max-width: 900px;
+    margin: 1.75rem auto;
+    padding: 0 1rem;
 }
 
 section {
-    padding: 2rem;
-    margin: 1rem auto;
-    max-width: 800px;
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    flex: 1;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 2rem 2.25rem;
+    margin-bottom: 1.75rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
+/* Typography */
 h2 {
-    color: #2c3e50;
+    color: #0f172a;
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e2e8f0;
+    font-weight: 700;
 }
 
+h3 {
+    color: #1e293b;
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+h4 {
+    color: #334155;
+    font-size: 1.05rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+p {
+    margin: 0 0 1rem 0;
+    color: var(--text-main);
+}
+
+a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+a:hover {
+    color: var(--primary-dark);
+}
+
+/* Profile Section on Home */
+.profile-card {
+    text-align: center;
+}
+
+.profile-img-container {
+    margin: 1.25rem auto;
+}
+
+.profile-img {
+    width: 170px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    display: block;
+    margin: 0 auto;
+}
+
+.quote-box {
+    margin: 1.5rem auto;
+    max-width: 680px;
+    padding: 1rem 1.5rem;
+    background-color: #f1f5f9;
+    border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0;
+    font-style: italic;
+    color: #334155;
+}
+
+/* Contact Info Chips / Quick links */
+.contact-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    margin: 1.25rem 0;
+}
+
+.contact-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.85rem;
+    background-color: #f1f5f9;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    font-size: 0.875rem;
+    color: #334155;
+    text-decoration: none;
+}
+
+.contact-chip:hover {
+    background-color: #e2e8f0;
+    color: #0f172a;
+    text-decoration: none;
+}
+
+/* Tags & Badges */
+.tag-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0.75rem 0 1.25rem 0;
+}
+
+.tag {
+    display: inline-block;
+    background-color: var(--tag-bg);
+    color: var(--tag-text);
+    padding: 0.3rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: 1px solid #bfdbfe;
+}
+
+/* Timeline & Experience Items */
+.timeline-item {
+    padding: 1rem 0;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.timeline-item:last-child {
+    border-bottom: none;
+}
+
+.timeline-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.timeline-title {
+    font-weight: 600;
+    color: #0f172a;
+    font-size: 1.05rem;
+}
+
+.timeline-badge {
+    font-size: 0.825rem;
+    background-color: #e0e7ff;
+    color: #3730a3;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.timeline-sub {
+    color: #64748b;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Publication Card */
+.pub-item {
+    margin-bottom: 1.25rem;
+    padding: 1rem 1.25rem;
+    background-color: #f8fafc;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    transition: transform 0.1s ease, border-color 0.1s ease;
+}
+
+.pub-item:hover {
+    border-color: #cbd5e1;
+}
+
+.pub-title {
+    font-weight: 600;
+    color: #0f172a;
+    margin-bottom: 0.25rem;
+    font-size: 1rem;
+}
+
+.pub-meta {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+}
+
+.btn-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.85rem;
+    padding: 0.25rem 0.75rem;
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.btn-link:hover {
+    background-color: #eff6ff;
+    border-color: #93c5fd;
+    text-decoration: none;
+}
+
+/* Reference Cards Grid */
+.ref-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.ref-card {
+    background-color: #f8fafc;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.15rem;
+}
+
+.ref-name {
+    font-weight: 700;
+    color: #0f172a;
+    font-size: 1.05rem;
+    margin-bottom: 0.4rem;
+}
+
+.ref-detail {
+    font-size: 0.9rem;
+    color: #475569;
+    margin-bottom: 0.35rem;
+}
+
+/* Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.skill-card {
+    background: #f8fafc;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.skill-card h4 {
+    margin-top: 0;
+    color: var(--primary);
+    font-size: 0.95rem;
+}
+
+/* Clean Unordered Lists */
+ul.clean-list {
+    margin: 0.5rem 0 1rem 1.25rem;
+    padding: 0;
+}
+
+ul.clean-list li {
+    margin-bottom: 0.4rem;
+}
+
+/* Footer */
 footer {
     text-align: center;
-    padding: 1rem;
-    background-color: #2c3e50;
-    color: white;
+    padding: 1.5rem 1rem;
+    background-color: #0f172a;
+    color: #94a3b8;
     width: 100%;
-    flex-shrink: 0;
+    margin-top: auto;
+    font-size: 0.9rem;
+    border-top: 1px solid #1e293b;
 }
 
-/* Mobile and Tablet Responsiveness */
+footer p {
+    margin: 0;
+    color: #94a3b8;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header {
+        padding: 1.75rem 1rem;
+    }
+
     .hamburger {
-        display: block; /* Show hamburger on smaller screens */
+        display: inline-block;
     }
 
     nav .menu {
-        display: none; /* Hidden by default on mobile */
-        flex-direction: column; /* Vertical ribbon style */
+        display: none;
+        flex-direction: column;
         position: absolute;
-        top: 100%; /* Below the nav bar */
+        top: 100%;
         left: 0;
         width: 100%;
-        background-color: #34495e;
+        background-color: #1e293b;
         text-align: left;
-        max-height: 0; /* Start collapsed */
-        overflow: hidden;
-        transition: max-height 0.5s ease-in-out; /* Smooth opening animation */
+        padding: 0.5rem 1rem 1rem 1rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     }
 
     nav .menu.active {
-        display: flex; /* Show when active */
-        max-height: 300px; /* Adjust based on menu height */
-    }
-
-    nav .menu li {
-        margin: 0;
-        border-bottom: 1px solid #2c3e50; /* Ribbon-like separation */
+        display: flex;
     }
 
     nav .menu a {
-        padding: 15px;
+        padding: 0.75rem 1rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
-}
 
-/* Tablet adjustments (optional, between mobile and desktop) */
-@media (min-width: 769px) and (max-width: 1024px) {
-    nav .menu li {
-        margin: 0 10px; /* Slightly tighter spacing on tablets */
+    section {
+        padding: 1.5rem 1.25rem;
     }
 }
