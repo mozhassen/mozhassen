@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Research &amp; Publications - Mohammed Zeinu Hassen</title>
-    <meta name="description" content="Research publications, peer-reviewed journal articles, books, and conference presentations by Mohammed Zeinu Hassen.">
+    <meta name="description" content="Complete list of publications, peer-reviewed journal articles, books, modules, and conference presentations by Mohammed Zeinu Hassen.">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -25,8 +25,31 @@
     </nav>
 
     <main>
+        <!-- Research Overview & Metrics -->
         <section>
-            <h2>Research Interests</h2>
+            <h2>Scholarly Overview</h2>
+            <p>My research focuses on the historiography of Ethiopian philosophy, ethics and artificial intelligence, educational philosophy, and the integration of indigenous knowledge systems into modern institutional governance.</p>
+
+            <div class="pub-stats-grid">
+                <div class="pub-stat-card">
+                    <div class="pub-stat-num">10</div>
+                    <div class="pub-stat-label">Peer-Reviewed Articles</div>
+                </div>
+                <div class="pub-stat-card">
+                    <div class="pub-stat-num">9</div>
+                    <div class="pub-stat-label">Books &amp; Modules</div>
+                </div>
+                <div class="pub-stat-card">
+                    <div class="pub-stat-num">4</div>
+                    <div class="pub-stat-label">Conference Papers</div>
+                </div>
+                <div class="pub-stat-card">
+                    <div class="pub-stat-num">23</div>
+                    <div class="pub-stat-label">Total Publications</div>
+                </div>
+            </div>
+
+            <h3>Core Research Areas</h3>
             <div class="tag-container">
                 <span class="tag">Historiography of Ethiopian Philosophy &amp; Continental Philosophy</span>
                 <span class="tag">Philosophical Counseling &amp; Comparative Philosophy &amp; Religion</span>
@@ -34,146 +57,291 @@
                 <span class="tag">Philosophical Dimensions of Indigenous Knowledge</span>
                 <span class="tag">Artificial Intelligence and Ethics</span>
             </div>
+            
             <p>For additional preprints, book drafts, and working papers, visit my <a href="https://acadamia.academia.edu/MohammedzeinuHassen" target="_blank" rel="noopener noreferrer">Academia.edu profile</a>.</p>
         </section>
 
+        <!-- Interactive Publications Directory -->
         <section>
-            <h2>Peer-Reviewed Journal Articles</h2>
+            <h2>All Publications &amp; Scholarly Works</h2>
 
-            <div class="pub-item">
-                <div class="pub-title">The risk of moral outsourcing: why artificial intelligence cannot and should not make our ethical decisions</div>
-                <div class="pub-meta">Hassen, M. Z. (2025). <em>EthAIca</em>.</div>
-                <a href="https://ai.ageditor.ar/index.php/ai/article/view/428" target="_blank" rel="noopener noreferrer" class="btn-link">🔗 View Article</a>
+            <div class="pub-controls">
+                <input type="text" id="pubSearch" class="pub-search-input" placeholder="Search by title, journal, topic, or keyword (e.g. AI, ethics, Dewey)..." aria-label="Search publications">
+                
+                <div class="filter-pills">
+                    <button class="filter-btn active" data-filter="all">All (<span id="countAll">23</span>)</button>
+                    <button class="filter-btn" data-filter="article">Journal Articles (10)</button>
+                    <button class="filter-btn" data-filter="book">Books &amp; Modules (9)</button>
+                    <button class="filter-btn" data-filter="conference">Conferences (4)</button>
+                </div>
             </div>
 
-            <div class="pub-item">
-                <div class="pub-title">Beyond the algorithm: Applying critical lenses to AI governance and societal change</div>
-                <div class="pub-meta">Hassen, M. (2025). <em>AI and Ethics</em> (Springer).</div>
-                <a href="https://doi.org/10.1007/s43681-025-00781-x" target="_blank" rel="noopener noreferrer" class="btn-link">📄 doi.org/10.1007/s43681-025-00781-x</a>
+            <div id="pubList">
+                <!-- 1. Journal Article: EthAIca -->
+                <div class="pub-item" data-category="article" data-keywords="risk moral outsourcing artificial intelligence ethical decisions ethaica ai ethics 2025">
+                    <div class="pub-header-row">
+                        <div class="pub-title">The risk of moral outsourcing: why artificial intelligence cannot and should not make our ethical decisions</div>
+                        <span class="pub-type-badge">Journal Article</span>
+                    </div>
+                    <div class="pub-meta">Hassen, M. Z. (2025). <em>EthAIca</em>.</div>
+                    <div class="pub-links">
+                        <a href="https://ai.ageditor.ar/index.php/ai/article/view/428" target="_blank" rel="noopener noreferrer" class="btn-link">🔗 View Paper at EthAIca</a>
+                    </div>
+                </div>
+
+                <!-- 2. Journal Article: AI and Ethics (Springer) -->
+                <div class="pub-item" data-category="article" data-keywords="beyond algorithm applying critical lenses ai governance societal change springer 2025">
+                    <div class="pub-header-row">
+                        <div class="pub-title">Beyond the algorithm: Applying critical lenses to AI governance and societal change</div>
+                        <span class="pub-type-badge">Journal Article</span>
+                    </div>
+                    <div class="pub-meta">Hassen, M. (2025). <em>AI and Ethics</em> (Springer Nature).</div>
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.1007/s43681-025-00781-x" target="_blank" rel="noopener noreferrer" class="btn-link">📄 doi.org/10.1007/s43681-025-00781-x</a>
+                    </div>
+                </div>
+
+                <!-- 3. Journal Article: Innovation -->
+                <div class="pub-item" data-category="article" data-keywords="effort vs automation core conflict ai in education innovation 2025 pedagogy teaching">
+                    <div class="pub-header-row">
+                        <div class="pub-title">Effort vs. automation: The core conflict of AI in education</div>
+                        <span class="pub-type-badge">Journal Article</span>
+                    </div>
+                    <div class="pub-meta">Hassen, M. Z. (2025, August 19). <em>Innovation</em>, 6(3), 99–111.</div>
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.11648/j.innov.20250603.17" target="_blank" rel="noopener noreferrer" class="btn-link">📄 doi.org/10.11648/j.innov.20250603.17</a>
+                    </div>
+                </div>
+
+                <!-- 4. Journal Article: AJEIT -->
+                <div class="pub-item" data-category="article" data-keywords="impact ai students reading critical thinking problem solving skills american journal education information technology 2025">
+                    <div class="pub-header-row">
+                        <div class="pub-title">The Impact of AI on Students’ Reading, Critical Thinking, and Problem-Solving Skills</div>
+                        <span class="pub-type-badge">Journal Article</span>
+                    </div>
+                    <div class="pub-meta">Hassen, M. Z. (2025). <em>American Journal of Education and Information Technology</em>, 9(2), 82–90.</div>
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.11648/j.ajeit.20250902.12" target="_blank" rel="noopener noreferrer" class="btn-link">📄 doi.org/10.11648/j.ajeit.20250902.12</a>
+                    </div>
+                </div>
+
+                <!-- 5. Journal Article: AJMSE - Indigenous Knowledge -->
+                <div class="pub-item" data-category="article" data-keywords="bridging worlds mechanisms integrating indigenous knowledge ethiopian parliament governance functions american journal management science engineering 2025">
+                    <div class="pub-header-row">
+                        <div class="pub-title">Bridging worlds: Mechanisms for integrating indigenous knowledge into the Ethiopian Parliament’s governance functions</div>
+                        <span class="pub-type-badge">Journal Article</span>
+                    </div>
+                    <div class="pub-meta">Hassen, M. Z. (2025). <em>American Journal of Management Science and Engineering</em>, 10(4), 66–78.</div>
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.11648/j.ajmse.20251004.11" target="_blank" rel="noopener noreferrer" class="btn-link">📄 doi.org/10.11648/j.ajmse.20251004.11</a>
+                    </div>
+                </div>
+
+                <!-- 6. Journal Article: Science Research -->
+                <div class="pub-item" data-category="article" data-keywords="rethinking physical environment pedagogical approaches ethiopian higher education real world readiness science research 2025">
+                    <div class="pub-header-row">
+                        <div class="pub-title">Rethinking the physical environment and pedagogical approaches in Ethiopian higher education for real‑world readiness</div>
+                        <span class="pub-type-badge">Journal Article</span>
+                    </div>
+                    <div class="pub-meta">Hassen, M. Z. (2025). <em>Science Research</em>, 13(3), 32–42.</div>
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.11648/j.sr.20251303.11" target="_blank" rel="noopener noreferrer" class="btn-link">📄 doi.org/10.11648/j.sr.20251303.11</a>
+                    </div>
+                </div>
+
+                <!-- 7. Journal Article: AJMSE - Women in Forests -->
+                <div class="pub-item" data-category="article" data-keywords="gendered understandings nature womens role indigenous knowledge resource management ethiopian forests 2025">
+                    <div class="pub-header-row">
+                        <div class="pub-title">Gendered understandings of nature: Women's role in indigenous knowledge and resource management in Ethiopian forests</div>
+                        <span class="pub-type-badge">Journal Article</span>
+                    </div>
+                    <div class="pub-meta">Hassen, M. Z. (2025). <em>American Journal of Management Science and Engineering</em>, 10(3), 58–65.</div>
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.11648/j.ajmse.20251003.12" target="_blank" rel="noopener noreferrer" class="btn-link">📄 doi.org/10.11648/j.ajmse.20251003.12</a>
+                    </div>
+                </div>
+
+                <!-- 8. Journal Article: Mathematics & Computer Science -->
+                <div class="pub-item" data-category="article" data-keywords="interplay ethics consciousness human purpose mathematics computer science 2025 philosophical">
+                    <div class="pub-header-row">
+                        <div class="pub-title">The interplay of ethics, consciousness, and human purpose</div>
+                        <span class="pub-type-badge">Journal Article</span>
+                    </div>
+                    <div class="pub-meta">Hassen, M. Z. (2025). <em>Mathematics and Computer Science</em>, 10(1), 1–14.</div>
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.11648/j.mcs.20251001.11" target="_blank" rel="noopener noreferrer" class="btn-link">📄 doi.org/10.11648/j.mcs.20251001.11</a>
+                    </div>
+                </div>
+
+                <!-- 9. Journal Article: Paradox of Choice -->
+                <div class="pub-item" data-category="article" data-keywords="paradox choice intersection freedom anxiety international journal philosophy existentialism 2024">
+                    <div class="pub-header-row">
+                        <div class="pub-title">The paradox of choice: The intersection of freedom and anxiety</div>
+                        <span class="pub-type-badge">Journal Article</span>
+                    </div>
+                    <div class="pub-meta">Hassen, M. Z. (2024). <em>International Journal of Philosophy</em>, 12(4), 75–83.</div>
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.11648/j.ijp.20241204.13" target="_blank" rel="noopener noreferrer" class="btn-link">📄 doi.org/10.11648/j.ijp.20241204.13</a>
+                    </div>
+                </div>
+
+                <!-- 10. Journal Article: John Dewey -->
+                <div class="pub-item" data-category="article" data-keywords="critical assessment john dewey philosophy of education pragmatism international journal philosophy 2023">
+                    <div class="pub-header-row">
+                        <div class="pub-title">A critical assessment of John Dewey's philosophy of education</div>
+                        <span class="pub-type-badge">Journal Article</span>
+                    </div>
+                    <div class="pub-meta">Hassen, M. Z. (2023). <em>International Journal of Philosophy</em>, 11(2), 28–31.</div>
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.11648/j.ijp.20231102.13" target="_blank" rel="noopener noreferrer" class="btn-link">📄 doi.org/10.11648/j.ijp.20231102.13</a>
+                    </div>
+                </div>
+
+                <!-- 11. Book: AI Revolution in Education -->
+                <div class="pub-item" data-category="book" data-keywords="ai revolution in education generis publishing book 2025 artificial intelligence teaching">
+                    <div class="pub-header-row">
+                        <div class="pub-title">The AI Revolution in Education</div>
+                        <span class="pub-type-badge book">Book</span>
+                    </div>
+                    <div class="pub-meta">Hassen, M. Z. (2025). <em>Generis Publishing</em>.</div>
+                    <div class="pub-links">
+                        <a href="https://generis-publishing.com/book.php?title=strong-the-ai-revolution-in-education-strong-3001" target="_blank" rel="noopener noreferrer" class="btn-link">📚 View on Generis Publishing</a>
+                    </div>
+                </div>
+
+                <!-- 12. Book: Talaku Asmat -->
+                <div class="pub-item" data-category="book" data-keywords="talaku asmat book academia 2025 ethiopian philosophy literature">
+                    <div class="pub-header-row">
+                        <div class="pub-title">Talaku Asmat</div>
+                        <span class="pub-type-badge book">Book</span>
+                    </div>
+                    <div class="pub-meta">Hassen, M. Z. (2025).</div>
+                    <div class="pub-links">
+                        <a href="https://www.academia.edu/44970893" target="_blank" rel="noopener noreferrer" class="btn-link">📖 View on Academia.edu</a>
+                    </div>
+                </div>
+
+                <!-- 13. Book / Module: Civic and Moral Education -->
+                <div class="pub-item" data-category="book" data-keywords="civic and moral education module curriculum ethics university 2025 academia">
+                    <div class="pub-header-row">
+                        <div class="pub-title">Civic and Moral Education Module</div>
+                        <span class="pub-type-badge book">Academic Module</span>
+                    </div>
+                    <div class="pub-meta">Hassen, M. Z. (2025). University Instructional Module.</div>
+                    <div class="pub-links">
+                        <a href="https://www.academia.edu/126996332" target="_blank" rel="noopener noreferrer" class="btn-link">📖 View on Academia.edu</a>
+                    </div>
+                </div>
+
+                <!-- 14. Book: Aristotle Politics: A Commentary -->
+                <div class="pub-item" data-category="book" data-keywords="aristotle politics a commentary political philosophy ancient 2023 academia">
+                    <div class="pub-header-row">
+                        <div class="pub-title">Aristotle Politics: A Commentary</div>
+                        <span class="pub-type-badge book">Book / Commentary</span>
+                    </div>
+                    <div class="pub-meta">Hassen, M. Z. (2023).</div>
+                    <div class="pub-links">
+                        <a href="https://www.academia.edu/106392508" target="_blank" rel="noopener noreferrer" class="btn-link">📖 View on Academia.edu</a>
+                    </div>
+                </div>
+
+                <!-- 15. Book: Introduction to Arabic Literature -->
+                <div class="pub-item" data-category="book" data-keywords="introduction to arabic literature poetry prose translation 2021 academia">
+                    <div class="pub-header-row">
+                        <div class="pub-title">Introduction to Arabic Literature</div>
+                        <span class="pub-type-badge book">Book</span>
+                    </div>
+                    <div class="pub-meta">Hassen, M. Z. (2021).</div>
+                    <div class="pub-links">
+                        <a href="https://www.academia.edu/36739916" target="_blank" rel="noopener noreferrer" class="btn-link">📖 View on Academia.edu</a>
+                    </div>
+                </div>
+
+                <!-- 16. Book: yetimihirut filsifina -->
+                <div class="pub-item" data-category="book" data-keywords="yetimihirut filsifina philosophy of education amharic 2018 academia">
+                    <div class="pub-header-row">
+                        <div class="pub-title">yetimihirut filsifina (የትምህርት ፍልስፍና)</div>
+                        <span class="pub-type-badge book">Book</span>
+                    </div>
+                    <div class="pub-meta">Hassen, M. Z. (2018). Philosophy of Education.</div>
+                    <div class="pub-links">
+                        <a href="https://www.academia.edu/143683008" target="_blank" rel="noopener noreferrer" class="btn-link">📖 View on Academia.edu</a>
+                    </div>
+                </div>
+
+                <!-- 17. Book: Yesayns Filsifina -->
+                <div class="pub-item" data-category="book" data-keywords="yesayns filsifina philosophy of science amharic 2017 academia">
+                    <div class="pub-header-row">
+                        <div class="pub-title">Yesayns Filsifina (የሳይንስ ፍልስፍና)</div>
+                        <span class="pub-type-badge book">Book</span>
+                    </div>
+                    <div class="pub-meta">Hassen, M. Z. (2017). Philosophy of Science.</div>
+                    <div class="pub-links">
+                        <a href="https://www.academia.edu/143793526" target="_blank" rel="noopener noreferrer" class="btn-link">📖 View on Academia.edu</a>
+                    </div>
+                </div>
+
+                <!-- 18. Book / Module: Logic and Critical Thinking -->
+                <div class="pub-item" data-category="book" data-keywords="logic and critical thinking argumentation fallacy reasoning 2015 academia">
+                    <div class="pub-header-row">
+                        <div class="pub-title">Logic and Critical Thinking</div>
+                        <span class="pub-type-badge book">Academic Module</span>
+                    </div>
+                    <div class="pub-meta">Hassen, M. Z. (2015). University Course Module.</div>
+                    <div class="pub-links">
+                        <a href="https://www.academia.edu/143318084" target="_blank" rel="noopener noreferrer" class="btn-link">📖 View on Academia.edu</a>
+                    </div>
+                </div>
+
+                <!-- 19. Module: Behavioral and competence based module for civil servants -->
+                <div class="pub-item" data-category="book" data-keywords="behavioral competence based module civil servants leader creativity innovation leadership governance">
+                    <div class="pub-header-row">
+                        <div class="pub-title">Behavioral and Competence-Based Module for Civil Servants Leader-I in Creativity and Innovation</div>
+                        <span class="pub-type-badge book">Civil Service Module</span>
+                    </div>
+                    <div class="pub-meta">Hassen, M. Z. Prepared for civil service leadership capacity-building, public sector innovation, and ethical decision-making.</div>
+                </div>
+
+                <!-- 20. Conference: Wollo University -->
+                <div class="pub-item" data-category="conference" data-keywords="leveraging ai enhance teaching learning 21st century education wollo university national conference 2025">
+                    <div class="pub-header-row">
+                        <div class="pub-title">Leveraging AI to enhance teaching and learning in the 21st century education</div>
+                        <span class="pub-type-badge conf">Conference Presentation</span>
+                    </div>
+                    <div class="pub-meta"><strong>Presenter</strong> (May 2025). 5th Annual National Education and Behavioural Sciences Research Conference, Wollo University, Ethiopia.</div>
+                </div>
+
+                <!-- 21. Conference: ISTCES Istanbul -->
+                <div class="pub-item" data-category="conference" data-keywords="impact south south cooperation industrial development istces conference istanbul turkiye 2025">
+                    <div class="pub-header-row">
+                        <div class="pub-title">The Impact of South-South Cooperation On Industrial Development</div>
+                        <span class="pub-type-badge conf">Conference Presentation</span>
+                    </div>
+                    <div class="pub-meta"><strong>Presenter</strong> (Sep 2025). ISTCES Conference, Istanbul, Türkiye.</div>
+                </div>
+
+                <!-- 22. Conference: Charles Sanders Peirce -->
+                <div class="pub-item" data-category="conference" data-keywords="inquiry concerning pragmatism charles sanders peirce presentation epistemology">
+                    <div class="pub-header-row">
+                        <div class="pub-title">An Inquiry Concerning Pragmatism of Charles Sanders Peirce</div>
+                        <span class="pub-type-badge conf">Conference Presentation</span>
+                    </div>
+                    <div class="pub-meta"><strong>Presenter</strong>. Academic paper and conference presentation on American Pragmatism and Peirce's semiotic epistemology.</div>
+                </div>
+
+                <!-- 23. Conference: Avicenna -->
+                <div class="pub-item" data-category="conference" data-keywords="epistemological metaphysical thought avicenna ibn sina islamic philosophy">
+                    <div class="pub-header-row">
+                        <div class="pub-title">Epistemological and Metaphysical Thought of Avicenna</div>
+                        <span class="pub-type-badge conf">Conference Presentation</span>
+                    </div>
+                    <div class="pub-meta"><strong>Presenter</strong>. Research presentation analyzing the metaphysical foundation and epistemology of Ibn Sina (Avicenna).</div>
+                </div>
             </div>
 
-            <div class="pub-item">
-                <div class="pub-title">Effort vs. automation: The core conflict of AI in education</div>
-                <div class="pub-meta">Hassen, M. Z. (2025, August 19). <em>Innovation</em>, 6(3), 99–111.</div>
-                <a href="https://doi.org/10.11648/j.innov.20250603.17" target="_blank" rel="noopener noreferrer" class="btn-link">📄 doi.org/10.11648/j.innov.20250603.17</a>
+            <div id="noResults" style="display: none; padding: 2rem; text-align: center; color: #64748b;">
+                <p>No publications found matching your search. Please try another keyword.</p>
             </div>
-
-            <div class="pub-item">
-                <div class="pub-title">The Impact of AI on Students’ Reading, Critical Thinking, and Problem-Solving Skills</div>
-                <div class="pub-meta">Hassen, M. Z. (2025). <em>American Journal of Education and Information Technology</em>, 9(2), 82–90.</div>
-                <a href="https://doi.org/10.11648/j.ajeit.20250902.12" target="_blank" rel="noopener noreferrer" class="btn-link">📄 doi.org/10.11648/j.ajeit.20250902.12</a>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-title">Bridging worlds: Mechanisms for integrating indigenous knowledge into the Ethiopian Parliament’s governance functions</div>
-                <div class="pub-meta">Hassen, M. Z. (2025). <em>American Journal of Management Science and Engineering</em>, 10(4), 66–78.</div>
-                <a href="https://doi.org/10.11648/j.ajmse.20251004.11" target="_blank" rel="noopener noreferrer" class="btn-link">📄 doi.org/10.11648/j.ajmse.20251004.11</a>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-title">Rethinking the physical environment and pedagogical approaches in Ethiopian higher education for real‑world readiness</div>
-                <div class="pub-meta">Hassen, M. Z. (2025). <em>Science Research</em>, 13(3), 32–42.</div>
-                <a href="https://doi.org/10.11648/j.sr.20251303.11" target="_blank" rel="noopener noreferrer" class="btn-link">📄 doi.org/10.11648/j.sr.20251303.11</a>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-title">Gendered understandings of nature: Women's role in indigenous knowledge and resource management in Ethiopian forests</div>
-                <div class="pub-meta">Hassen, M. Z. (2025). <em>American Journal of Management Science and Engineering</em>, 10(3), 58–65.</div>
-                <a href="https://doi.org/10.11648/j.ajmse.20251003.12" target="_blank" rel="noopener noreferrer" class="btn-link">📄 doi.org/10.11648/j.ajmse.20251003.12</a>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-title">The interplay of ethics, consciousness, and human purpose</div>
-                <div class="pub-meta">Hassen, M. Z. (2025). <em>Mathematics and Computer Science</em>, 10(1), 1–14.</div>
-                <a href="https://doi.org/10.11648/j.mcs.20251001.11" target="_blank" rel="noopener noreferrer" class="btn-link">📄 doi.org/10.11648/j.mcs.20251001.11</a>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-title">The paradox of choice: The intersection of freedom and anxiety</div>
-                <div class="pub-meta">Hassen, M. Z. (2024). <em>International Journal of Philosophy</em>, 12(4), 75–83.</div>
-                <a href="https://doi.org/10.11648/j.ijp.20241204.13" target="_blank" rel="noopener noreferrer" class="btn-link">📄 doi.org/10.11648/j.ijp.20241204.13</a>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-title">A critical assessment of John Dewey's philosophy of education</div>
-                <div class="pub-meta">Hassen, M. Z. (2023). <em>International Journal of Philosophy</em>, 11(2), 28–31.</div>
-                <a href="https://doi.org/10.11648/j.ijp.20231102.13" target="_blank" rel="noopener noreferrer" class="btn-link">📄 doi.org/10.11648/j.ijp.20231102.13</a>
-            </div>
-        </section>
-
-        <section>
-            <h2>Books &amp; Published Modules</h2>
-
-            <div class="pub-item">
-                <div class="pub-title">The AI Revolution in Education</div>
-                <div class="pub-meta">Hassen, M. Z. (2025). <em>Generis Publishing</em>.</div>
-                <a href="https://generis-publishing.com/book.php?title=strong-the-ai-revolution-in-education-strong-3001" target="_blank" rel="noopener noreferrer" class="btn-link">📚 View on Generis Publishing</a>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-title">Talaku Asmat</div>
-                <div class="pub-meta">Hassen, M. Z. (2025).</div>
-                <a href="https://www.academia.edu/44970893" target="_blank" rel="noopener noreferrer" class="btn-link">📖 View on Academia.edu</a>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-title">Civic and Moral Education Module</div>
-                <div class="pub-meta">Hassen, M. Z. (2025).</div>
-                <a href="https://www.academia.edu/126996332" target="_blank" rel="noopener noreferrer" class="btn-link">📖 View on Academia.edu</a>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-title">Aristotle Politics: A Commentary</div>
-                <div class="pub-meta">Hassen, M. Z. (2023).</div>
-                <a href="https://www.academia.edu/106392508" target="_blank" rel="noopener noreferrer" class="btn-link">📖 View on Academia.edu</a>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-title">Introduction to Arabic Literature</div>
-                <div class="pub-meta">Hassen, M. Z. (2021).</div>
-                <a href="https://www.academia.edu/36739916" target="_blank" rel="noopener noreferrer" class="btn-link">📖 View on Academia.edu</a>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-title">yetimihirut filsifina</div>
-                <div class="pub-meta">Hassen, M. Z. (2018).</div>
-                <a href="https://www.academia.edu/143683008" target="_blank" rel="noopener noreferrer" class="btn-link">📖 View on Academia.edu</a>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-title">Yesayns Filsifina</div>
-                <div class="pub-meta">Hassen, M. Z. (2017).</div>
-                <a href="https://www.academia.edu/143793526" target="_blank" rel="noopener noreferrer" class="btn-link">📖 View on Academia.edu</a>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-title">Logic and Critical Thinking</div>
-                <div class="pub-meta">Hassen, M. Z. (2015).</div>
-                <a href="https://www.academia.edu/143318084" target="_blank" rel="noopener noreferrer" class="btn-link">📖 View on Academia.edu</a>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-title">Behavioral and competence based module for civil servants leader-I in creativity and innovation</div>
-                <div class="pub-meta">Module Prepared for Civil Service Competency &amp; Leadership Development.</div>
-            </div>
-        </section>
-
-        <section>
-            <h2>Conference Presentations</h2>
-            <ul class="clean-list">
-                <li>
-                    <strong>Presenter</strong> (May 2025): <em>“Leveraging AI to enhance teaching and learning in the 21st century education”</em> — 5th Annual National Education and Behavioural Sciences Research Conference, Wollo University.
-                </li>
-                <li>
-                    <strong>Presenter</strong> (Sep 2025): <em>“The Impact of South-South Cooperation On Industrial Development...”</em> — ISTCES Conference, Istanbul, Türkiye.
-                </li>
-                <li>
-                    <strong>Presenter</strong>: <em>“An Inquiry Concerning Pragmatism of Charles Sanders Peirce”</em>.
-                </li>
-                <li>
-                    <strong>Presenter</strong>: <em>“Epistemological and Metaphysical Thought of Avicenna”</em>.
-                </li>
-            </ul>
         </section>
     </main>
 
@@ -182,9 +350,55 @@
     </footer>
 
     <script>
+        // Mobile Menu Toggle
         document.querySelector('.hamburger').addEventListener('click', function() {
             document.querySelector('.menu').classList.toggle('active');
         });
+
+        // Interactive Publications Filter & Search
+        const searchInput = document.getElementById('pubSearch');
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const pubItems = document.querySelectorAll('#pubList .pub-item');
+        const noResults = document.getElementById('noResults');
+
+        let currentFilter = 'all';
+
+        function applyFilterAndSearch() {
+            const query = searchInput.value.toLowerCase().trim();
+            let visibleCount = 0;
+
+            pubItems.forEach(item => {
+                const category = item.getAttribute('data-category');
+                const keywords = (item.getAttribute('data-keywords') + ' ' + item.innerText).toLowerCase();
+
+                const matchesFilter = (currentFilter === 'all') || (category === currentFilter);
+                const matchesQuery = !query || keywords.includes(query);
+
+                if (matchesFilter && matchesQuery) {
+                    item.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+
+            if (visibleCount === 0) {
+                noResults.style.display = 'block';
+            } else {
+                noResults.style.display = 'none';
+            }
+        }
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                currentFilter = this.getAttribute('data-filter');
+                applyFilterAndSearch();
+            });
+        });
+
+        searchInput.addEventListener('input', applyFilterAndSearch);
     </script>
 </body>
 </html>

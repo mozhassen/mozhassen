@@ -286,30 +286,153 @@ a:hover {
 }
 
 /* Publication Card */
+.pub-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 0.75rem;
+    margin: 1.25rem 0;
+}
+
+.pub-stat-card {
+    background: #f8fafc;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.9rem 1rem;
+    text-align: center;
+}
+
+.pub-stat-num {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--primary);
+    line-height: 1;
+    margin-bottom: 0.25rem;
+}
+
+.pub-stat-label {
+    font-size: 0.825rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.pub-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin: 1.25rem 0;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pub-search-input {
+    flex: 1;
+    min-width: 240px;
+    padding: 0.6rem 0.9rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 0.925rem;
+    background-color: #ffffff;
+    color: var(--text-main);
+}
+
+.pub-search-input:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.filter-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.filter-btn {
+    background: #f1f5f9;
+    border: 1px solid var(--border);
+    padding: 0.4rem 0.85rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #475569;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.filter-btn:hover {
+    background-color: #e2e8f0;
+    color: #0f172a;
+}
+
+.filter-btn.active {
+    background-color: var(--primary);
+    color: #ffffff;
+    border-color: var(--primary);
+}
+
 .pub-item {
     margin-bottom: 1.25rem;
-    padding: 1rem 1.25rem;
+    padding: 1.15rem 1.35rem;
     background-color: #f8fafc;
     border: 1px solid var(--border);
     border-radius: 8px;
-    transition: transform 0.1s ease, border-color 0.1s ease;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
 
 .pub-item:hover {
     border-color: #cbd5e1;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.pub-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 0.35rem;
+}
+
+.pub-type-badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.2rem 0.55rem;
+    border-radius: 4px;
+    background-color: #e0e7ff;
+    color: #3730a3;
+    white-space: nowrap;
+}
+
+.pub-type-badge.book {
+    background-color: #fef3c7;
+    color: #92400e;
+}
+
+.pub-type-badge.conf {
+    background-color: #dcfce7;
+    color: #166534;
 }
 
 .pub-title {
     font-weight: 600;
     color: #0f172a;
-    margin-bottom: 0.25rem;
-    font-size: 1rem;
+    font-size: 1.025rem;
+    line-height: 1.4;
 }
 
 .pub-meta {
     font-size: 0.9rem;
     color: var(--text-muted);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.6rem;
+}
+
+.pub-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
 }
 
 .btn-link {
